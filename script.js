@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registration-form");
   const feedbackDiv = document.getElementById("form-feedback");
 
@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isValid) {
       feedbackDiv.textContent = "Registration successful!";
       feedbackDiv.style.color = "#28a745";
-      form.submit();
     } else {
       feedbackDiv.style.color = "#dc3545";
       feedbackDiv.innerHTML = messages.map((message) => {
